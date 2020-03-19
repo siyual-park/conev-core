@@ -1,6 +1,6 @@
 {
   "name": "conev-core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Conev is a module that build environment variables from a `source` into `config`.",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
@@ -18,9 +18,9 @@
     "environment"
   ],
   "author": "Park Si-Yual",
-  "homepage": "https://github.com/kdPark0723/conev",
+  "homepage": "https://github.com/kdPark0723/conev-core",
   "bugs": {
-    "url": "https://github.com/kdPark0723/conev/issues",
+    "url": "https://github.com/kdPark0723/conev-core/issues",
     "email": "kdpark023@gmail.com"
   },
   "license": "MIT",
