@@ -1,9 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import Source from '../source/source';
-
-import extractConfigFromSources from './extract-config-from-sources';
+import Config from './config';
 import addSource from '../source/add-source';
-import Config from '../config/config';
 
 export default class ConfigBuilder {
   private readonly sources: Source[];
@@ -34,8 +32,8 @@ export default class ConfigBuilder {
   }
 
   async build() {
-    const config = await extractConfigFromSources(this.sources);
+    const config = new Config(this.sources, this.env);
 
-    return new Config(config, this.env);
+    return config.refresh();
   }
 }

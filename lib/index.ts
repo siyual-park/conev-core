@@ -1,3 +1,4 @@
-import ConfigBuilder from './config-builder/config-builder';
+import ConfigBuilder from './config/config-builder';
+import Config from './config/config';
 
-export { ConfigBuilder };
+export { ConfigBuilder, Config };

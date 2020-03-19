@@ -50,7 +50,10 @@ interface Source {
 
 ```typescript
 class Config {
-    constructor(map: Map<string, object>, envs: string[]);
+    cconstructor(sources: Source[], env: string[]);
+    
+    refresh(): Promise<Config>;
+    
     get(key?: string): object;
     set(key: string, value: any): void;
 }
