@@ -2,7 +2,7 @@
 
 Conev is a module that build environment variables from a `source` into `config`. Storing configuration in the environment separate from code is based on [The Twelve-Factor App](http://12factor.net/config) methodology.
 
-![](https://img.shields.io/npm/dm/conev.png?style=flat-square)
+![](https://img.shields.io/npm/dm/conev-core.png?style=flat-square)
 
 ​    
 
