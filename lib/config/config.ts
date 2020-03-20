@@ -5,6 +5,7 @@ import integrateConfig from './integrate-config';
 import getConfig from './get-config';
 import setConfig from './set-config';
 import extractConfigFromSources from '../source/extract-config-from-sources';
+import addSource from '../source/add-source';
 
 export default class Config {
   private readonly sources: Source[];
@@ -17,6 +18,24 @@ export default class Config {
     this.sources = sources;
     this.env = env;
     this.value = {};
+  }
+
+  setEnv(...env: string[]): Config {
+    this.env = env;
+
+    return this;
+  }
+
+  addEnv(...env: string[]): Config {
+    this.env.push(...env);
+
+    return this;
+  }
+
+  addSource(source: Source, priority: number = -1): Config {
+    addSource(this.sources, source, priority);
+
+    return this;
   }
 
   async refresh(): Promise<Config> {
