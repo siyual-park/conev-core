@@ -1,9 +1,9 @@
 {
   "name": "conev-core",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Conev is a module that build environment variables from a `source` into `config`.",
-  "main": "dist/lib/index.js",
-  "types": "dist/lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prepublish": "npm run buildPublish && npm run lint; exit 0",
     "build": "tsc",
