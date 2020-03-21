@@ -22,11 +22,11 @@ yarn add conev-core
 
 ```typescript
 class ConfigBuilder {
-    constructor(sources?: Source[], env?: string[]);
     setEnv(...env: string[]): ConfigBuilder;
     addEnv(...env: string[]): ConfigBuilder;
     addSource(source: Source, priority?: number): ConfigBuilder;
-    build(): Promise<Config>;
+
+    build(): Config;
 }
 ```
 
@@ -38,14 +38,14 @@ class ConfigBuilder {
 
 ```typescript
 class Config {
-    cconstructor(sources: Source[], env: string[]);
+    constructor(sources: Source[], env: string[]);
     
     setEnv(...env: string[]): Config;
     addEnv(...env: string[]): Config;
-    
     addSource(source: Source, priority?: number): Config;
-        
+    
     refresh(): Promise<Config>;
+    validate(): void;
     
     get(key?: string): object;
     set(key: string, value: any): void;

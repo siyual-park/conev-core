@@ -31,9 +31,7 @@ export default class ConfigBuilder {
     return this;
   }
 
-  async build() {
-    const config = new Config(this.sources, this.env);
-
-    return config.refresh();
+  build(): Config {
+    return new Config(this.sources, this.env);
   }
 }

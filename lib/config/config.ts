@@ -1,11 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import Source from '../source/source';
+import ValidateError from '../error/validate-error';
 
 import integrateConfig from './integrate-config';
 import getConfig from './get-config';
 import setConfig from './set-config';
 import extractConfigFromSources from '../source/extract-config-from-sources';
 import addSource from '../source/add-source';
+import configValidate from "./config-validate";
 
 export default class Config {
   private readonly sources: Source[];
@@ -45,6 +47,10 @@ export default class Config {
     this.value = integrateConfig(configs);
 
     return this;
+  }
+
+  validate(): void {
+    configValidate(this.value);
   }
 
   get(key: string = null): object {
