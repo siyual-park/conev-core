@@ -4,9 +4,9 @@ import Source from './source';
 import integrateConfig from '../config/integrate-config';
 
 // eslint-disable-next-line max-len
-export default async function extractConfigFromSources(sources: Array<Source>): Promise<Map<string, object>> {
+export default async function extractConfigFromSources(sources: Source[]): Promise<Map<string, object>> {
   const configs = await Promise.all(sources.map((source) => source.export()));
-  const configsMap = new Map<string, Array<object>>();
+  const configsMap = new Map<string, object[]>();
 
   configs.forEach((config) => {
     config.forEach((value, key) => {
