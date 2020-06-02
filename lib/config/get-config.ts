@@ -1,4 +1,4 @@
-export default function getConfig(config: object, key?: string): object {
+export default function getConfig(config: any, key?: string): any | null {
   if (key === null) return config;
 
   let current = config;

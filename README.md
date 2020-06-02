@@ -47,7 +47,7 @@ class Config {
     refresh(): Promise<Config>;
     validate(): void;
     
-    get(key?: string): object;
+    get(key?: string): any | null;
     set(key: string, value: any): void;
 }
 ```

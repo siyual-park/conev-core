@@ -52,7 +52,7 @@ export default class Config {
     configValidate(this.value);
   }
 
-  get(key: string = null): object {
+  get(key: string = null): any | null {
     return getConfig(this.value, key);
   }
 
